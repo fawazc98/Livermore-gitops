@@ -1,13 +1,8 @@
 name: 'Apply latest configuration to Fleet'
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-  workflow_dispatch: # allows manual triggering
-  schedule:
-  - cron: '0 6 * * *' # Nightly 6AM UTC
+  # Manual trigger only — removed automatic triggers (push/pull_request/schedule)
+  workflow_dispatch:
 
 # Prevent concurrent runs of this workflow.
 concurrency:
